@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>News Scraper</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.0.0/materia/bootstrap.min.css"/>
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">   <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">News Scraper</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a id="home" class="nav-link" href="/">Home </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" onclick="displaySaved()" id="viewSavedArticles">Saved Articles
+          <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a data-target="scrape-article" class="btn btn-primary scrape-new" onclick="displayScrape()">Scrape NEW Articles</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="jumbotron text-center">
+      <div class="overlay">
+      </div>
+      <div class="background-image">
+      </div>
+      <div class="caption">
+        <h1>News Scraper</h1>
+        <p>English Premier League NEWS</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col" id="nyt-0">
+      </div>
+      <div class="col" id="nyt-1">
+      </div>
+      <div class="col" id="nyt-2">
+      </div>
+    </div>
+
+    <div id="scrape-article" class="modal">
+      <div class="modal-content">
+          <h4>Number of Articles Scrapped</h4>
+          <h4 id="total-number"></h4>
+      </div>
+      <div class="modal-footer">
+          <a href="#" class="modal-action modal-close waves-effect waves-green btn">Close</a>
+      </div>
+    </div>
+
+    <!-- Modal Structure for creating a note -->
+    <div id="notes" class="modal">
+      <div class="modal-content">          
+        <h4 id="display">Add note here:</h4>
+          <form>
+              <div id="display-note">          
+
+              </div>
+              <textarea id="textarea1" class="materialize-textarea"></textarea>
+              <label for="textarea1">Enter Notes Here</label>
+          </form>
+      </div>
+      <div class="modal-footer">
+          <a href="#!" class="modal-action modal-close waves-effect waves-green btn" id="savenote">Save Note</a>
+      </div>
+    </div>
+
+  </div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="row justify-content-center">
+      <p>Articles News Scraper</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
+<script src="./assets/js/app.js"></script>
+
+</body>
+
+</html>

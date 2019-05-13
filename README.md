@@ -1,2 +1,2 @@
 # NewsScraper
-application displaying news from other web with capability to comment on them
+application displaying news from other web using "cheerios" and "axios".
